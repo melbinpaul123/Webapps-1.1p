@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Concepts Implementation</title>
+</head>
+<body>
+  <div id="output"></div>
+  <script>
+    function writeToOutput(content) {
+      const outputElement = document.getElementById('output');
+      outputElement.innerHTML += content + '<br>';
+    }
+
+    // String methods
+    const str = 'Hello, world!';
+    writeToOutput('String methods:');
+    writeToOutput('1. Length: ' + str.length);
+    writeToOutput('2. To uppercase: ' + str.toUpperCase());
+    writeToOutput('3. To lowercase: ' + str.toLowerCase());
+    writeToOutput('4. Substring: ' + str.substring(0, 5));
+    writeToOutput('5. Index of "world": ' + str.indexOf('world'));
+
+    // Number methods
+    const num = 123.456789;
+    writeToOutput('Number methods:');
+    writeToOutput('1. Fixed to 2 decimal places: ' + num.toFixed(2));
+    writeToOutput('2. Exponential notation: ' + num.toExponential(3));
+    writeToOutput('3. Integer value: ' + Math.floor(num));
+    writeToOutput('4. Absolute value: ' + Math.abs(-num));
+    writeToOutput('5. Square root: ' + Math.sqrt(num));
+
+    // Array methods
+    const arr = ['apple', 'banana', 123, 456, 'orange'];
+    writeToOutput('Array methods:');
+    writeToOutput('1. Join: ' + arr.join(', '));
+    writeToOutput('2. Pop: ' + arr.pop());
+    writeToOutput('3. Push: ' + arr.push('grape'));
+    writeToOutput('4. Shift: ' + arr.shift());
+    writeToOutput('5. Reverse: ' + arr.reverse());
+
+    // Date methods
+    const now = new Date();
+    writeToOutput('Date methods:');
+    writeToOutput('1. Full year: ' + now.getFullYear());
+    writeToOutput('2. Month (0-based): ' + now.getMonth());
+    writeToOutput('3. Date: ' + now.getDate());
+    writeToOutput('4. Hours: ' + now.getHours());
+    writeToOutput('5. Day (0: Sunday, 6: Saturday): ' + now.getDay());
+
+    // Function methods
+    function greet(name) {
+      writeToOutput('Hello, ' + name + '!');
+    }
+
+    const greetFunction = greet;
+    writeToOutput('Function methods:');
+    greetFunction('Alice');
+
+  </script>
+</body>
+</html>
