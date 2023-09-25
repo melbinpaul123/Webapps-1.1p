@@ -29,6 +29,7 @@
             background-color: #f0f0f0;
             padding: 10px;
             box-sizing: border-box;
+            cursor: pointer; /* Add cursor style on hover */
         }
 
         /* Media Query for Smaller Screens */
@@ -41,9 +42,15 @@
 </head>
 <body>
     <div class="container">
-        <div class="column">Column 1</div>
-        <div class="column">Column 2</div>
-        <div class="column">Column 3</div>
+        <div class="column" onclick="changeText('Column 1')">Column 1</div>
+        <div class="column" onclick="changeText('Column 2')">Column 2</div>
+        <div class="column" onclick="changeText('Column 3')">Column 3</div>
     </div>
+
+    <script>
+        function changeText(columnName) {
+            alert('You clicked ' + columnName);
+        }
+    </script>
 </body>
 </html>
